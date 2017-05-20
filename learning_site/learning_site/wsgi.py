@@ -7,6 +7,9 @@ For more information on this file, see
 https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 """
 
+# NOTE: requirements.txt file must be present for cloud hosting.
+# add dependencies to file by running "pip freeze > requirements.txt"
+
 import os
 
 from django.core.wsgi import get_wsgi_application
