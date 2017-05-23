@@ -23,6 +23,10 @@ urlpatterns = [
     url(r'courses/', include('courses.urls', namespace='courses')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.hello_world),
+    # create link to django built-in api authentication
+    # to gain access, run "python manage.py createsuperuser"
+    # to access, navigate to localhost:8000/api-auth/login
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
